@@ -11,15 +11,21 @@
 
             $scope.input = " ";
             $scope.message =" ";
+        
             $scope.stack = function (){
                 var array = $scope.input.split(',');
 
-                if (array.length != ''  && array.length <= 3 ) {
+                if (array.length > 1 && array.length <=3 ) {
                     $scope.message = "Enjoy";
-                } else if (array.length > 3){
-                    $scope.message = "Too much";
-                } else {
-                    $scope.message = "Enter Data First";
+                    
+
+                } 
+                else if (array.length > 3){
+                    $scope.message = "Too Much";
+                } 
+
+                else{
+                    $scope.message = "Enter data first";
                 }
             
             } ;
